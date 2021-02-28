@@ -1,0 +1,23 @@
+.item {
+  border: 1px solid grey;
+  width: 400px;
+  padding: 10px;
+  margin: 40px;
+}
+.item img {
+  width: 300px;
+  height: 300px;
+}
+.price {
+  font-weight: bold;
+}
+
+.price {
+  display: flex;
+  justify-content: space-evenly;
+}
+.onSale {
+  background-color: red;
+  color: white;
+  padding: 5px;
+}

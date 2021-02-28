@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import '../styles/Home.css'
+import Itemlist from '../components/Itemlist'
 
 function Home() {
-    return (
-        <div>
-        <h1>Home sweet home</h1>
-        </div>
-    )
+  return (
+    <div>
+      <Itemlist/>
+    </div>
+  );
 }
 
-export default Home
+export default Home;

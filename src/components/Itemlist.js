@@ -1,8 +1,8 @@
-import React,{useState, useEffect} from "react";
-import Itemlist from "../components/Itemlist";
-import Item from '../components/Item'
+import React ,{useState, useEffect} from 'react'
+import Item from './Item'
+import '../styles/ItemList.css'
 
-function Deals() {
+function Itemlist() {
   const [items, setItems] = useState([])
 
   useEffect(async () => {
@@ -10,16 +10,10 @@ function Deals() {
     const data = await response.json()
     setItems(data.items)
   }, [])
-
-  const filter = items.filter((item) => item.isOnSale === true)
-
-  if(filter.length === 0){
-    return <h1>Sorry folks, nothing for sale today :(</h1>
-  }
   
   return (
-    <div>
-      {items.filter((item) => item.isOnSale === true).map((item) => (
+    <div className="itemList">
+      {items.map(item => (
         <Item 
         name={item.name} 
         img={item.imageUrl} 
@@ -31,7 +25,7 @@ function Deals() {
         />
       ))}
     </div>
-  );
+  )
 }
 
-export default Deals;
+export default Itemlist
